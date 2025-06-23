@@ -25,7 +25,7 @@
 ### 1. Clone the Repo
 
 ```bash
-[git clone https://github.com/Shaan2522/ai-terminal-assistant.git](https://github.com/Shaan2522/ai-terminal-assistant.git)
+git clone https://github.com/Shaan2522/ai-terminal-assistant.git
 ```
 
 ### 2. Install Requirements

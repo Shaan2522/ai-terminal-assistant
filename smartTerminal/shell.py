@@ -48,10 +48,10 @@ class SmartShell:
         return binary is not None
 
     def run(self):
-        print("🔮 SmartCLI Shell. Type commands or natural language.")
+        print("🔮 NL-termiNL Shell. Type commands or natural language.")
         while True:
             try:
-                text = self.session.prompt("smartcli> ", completer=self.completer)
+                text = self.session.prompt("NL-termiNL> ", completer=self.completer)
                 if not text.strip():
                     continue
 
@@ -77,4 +77,4 @@ class SmartShell:
                 continue
             except EOFError:
                 break
-        print("👋 Exiting SmartCLI")
+        print("👋 Exiting NL-termiNL")

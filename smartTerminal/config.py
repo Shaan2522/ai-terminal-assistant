@@ -3,7 +3,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import google.generativeai as genai
 
-CONFIG_PATH = Path.home() / ".smartcli"
+CONFIG_PATH = Path.home() / ".smartTerminal"
 ENV_FILE = CONFIG_PATH / ".env"
 
 def get_api_key():
@@ -23,9 +23,9 @@ def is_api_key_valid(key: str) -> bool:
     """Check if the provided Gemini API key is valid by making a test call."""
     try:
         genai.configure(api_key=key)
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-2.5-flash")
         # Test with a harmless prompt
-        _ = model.generate_content("Hello")
+        _ = model.count_tokens("test") 
         return True
     except Exception:
         return False
